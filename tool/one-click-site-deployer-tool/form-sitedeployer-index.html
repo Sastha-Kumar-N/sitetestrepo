@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site deployer tool</title>
+    <link rel="icon" type="image/icon-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contact-container"> 
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <a href="../../index.html"> <h1><img src="assets/drupal.png"></h1></a>
+                <h2> Bharat Genome Database</h2>
+                <h3>Kindly fill the form to download the tool</h3>
+                <h4>(Used only for statistical analysis of tool)</h4>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="397ff88e-3f30-4e1e-9db1-a330f565b886">
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <input type="text" name="text" placeholder="Organisation Name" class="contact-inputs" required>
+
+            <textarea name="message" placeholder="Your Use of our tool and database message" class="contact-inputs" required></textarea>
+            <div class="checkbox-container">
+                <input type="checkbox" id="agreeCheckbox" name="agreeCheckbox" required>
+                <label for="agreeCheckbox">By using our tool, you hereby acknowledge the usage of our tool and agree 
+                    to cite our database on your website.</label>
+                    <br>
+                    <div class="note"><h4>Note:</h4></div>
+                <p> After form submission a new tab will open from which you can access our tool</p>
+
+            </div>
+           <button type="submit">Submit <img src="assets/submit.png" alt="submit"></button>
+        </form>
+
+        <div class="contact-right"> 
+            <img src="assets/1.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        // Function to redirect after form submission
+        function redirectToDownloadPage() {
+            var newTab = window.open("site-deployer-tool.html", "_blank"); // Corrected the href attribute to navigate to the correct download page
+        }
+
+        // Add event listener to form submission
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            // Call the function to open the download page in a new tab
+            redirectToDownloadPage();
+        });
+    </script>
+</body>
+</html>

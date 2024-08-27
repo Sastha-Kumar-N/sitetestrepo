@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #3498db; /* Choose a color that fits your design */
+  color: #fff; /* Text color */
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between; /* Add space between logo and navigation */
+  align-items: center;
+}
+
+.logo {
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.logo img {
+  width: 50px; /* Set the width of your logo */
+  height: auto; /* Maintain aspect ratio */
+}
+
+h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 15px; /* Adjust the margin between navigation items */
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px; /* Adjust the font size as needed */
+}
+.main-content {
+  text-align: center;
+  margin: 50px;
+}
+
+.game-header {
+  background-color: #db8134  ; /* Choose a color that fits your design */
+  color: #fff; /* Text color */
+  padding: 20px;
+width: 50%;
+  border-radius: 50px;
+margin: 0 auto;
+}
+
+.game-header h2 {
+  margin: 0;
+  font-size: 24px; /* Adjust the font size as needed */
+}

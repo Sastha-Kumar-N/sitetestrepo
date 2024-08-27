@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>BGDB News</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    
+
+    <!-- Favicon -->
+    <link href="../BGDB-index-files/Logo/bgdb-favicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+	
+</head>
+
+<body>
+&nbsp;
+<!-- Topbar Start -->
+<div class="container-fluid d-none d-lg-block">
+    <div class="row align-items-center bg-white py-3 px-lg-5">
+        <div class="col-lg-4 d-flex align-items-center">
+            <a href="../index.html" class="navbar-brand p-0 d-none d-lg-block">
+                 <!-- Logo -->
+                <h1 class="m-0 display-4 text-uppercase text-primary ml-2"><img src="../BGDB-index-files/Logo/bgdb simple white bg.png" width="90" height="76" alt=""/>&nbsp;BGDB<span
+                        class="text-secondary font-weight-normal">News</span></h1>
+            </a>
+			
+        </div>
+        <div class="col-lg-8 text-center text-lg-right">
+            
+        </div>
+    </div>
+</div>
+
+
+<!-- Topbar End -->
+
+       <!-- Navbar Start -->
+<div class="container-fluid p-0">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2 py-lg-0 px-lg-5">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="m-0 display-4 text-uppercase text-primary">BGDB<span class="text-white font-weight-normal">News</span></h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button><br>
+
+       <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav mr-auto py-0">
+                <a href="../index.html" class="nav-item nav-link active">Home</a>
+                <!--<a href="category.html" class="nav-item nav-link">ALL TOPICS</a>
+                <a href="single.html" class="nav-item nav-link">&nbsp;Genomes</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">CATEGORY</a>
+                    <div class="dropdown-menu rounded-0 m-0">
+                        <a href="#" class="dropdown-item">Molecular Biology</a>
+                        <a href="#" class="dropdown-item">Genomics</a>
+                        <a href="#" class="dropdown-item">Corona Virus</a>
+                  </div>
+              </div>
+                <a href="contact.html" class="nav-item nav-link">News & Events</a>-->
+                <a href="../contact-us/index.html" class="nav-item nav-link">Contact Us</a>
+            </div>
+
+            <!-- Add this div to the right side of your navigation bar where you want the time and date to appear -->
+            <div class="navbar-nav ml-auto py-0">
+                <span id="datetime" class="nav-item nav-link"></span>
+            </div>
+      </div>
+    </nav>
+</div>
+
+<!-- Add this script after your navigation bar code -->
+<script>
+    function updateDateTime() {
+        // Get the current date and time
+        var currentDate = new Date();
+        var hours = currentDate.getHours();
+        var minutes = currentDate.getMinutes();
+        var seconds = currentDate.getSeconds();
+        var day = currentDate.getDate();
+        var month = currentDate.getMonth() + 1; // Months are zero-based
+        var year = currentDate.getFullYear();
+
+        // Format the time and date
+        var formattedTime = hours + ':' + (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+        var formattedDate = month + '/' + day + '/' + year;
+
+        // Update the content of the element with the id "datetime"
+        document.getElementById('datetime').innerHTML = formattedTime + ' ' + formattedDate;
+
+        // Update the time every 1000 milliseconds (1 second)
+        setTimeout(updateDateTime, 1000);
+    }
+
+    // Call the function to initially set the content and start the update loop
+    updateDateTime();
+</script>
+
+                <!--<div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+                    <input type="text" class="form-control border-0" placeholder="Keyword">
+                    <div class="input-group-append">
+                        <button class="input-group-text bg-primary text-dark border-0 px-3"><i
+                                class="fa fa-search"></i></button>-->
+          </div>
+                </div>
+            </div>
+</nav>
+    </div>
+    <!-- Navbar End -->
+            <!-- Navbar content here... -->
+        </nav>
+    </div>
+    <!-- Navbar End -->
+<!-- Scrolltag -->
+    <rssapp-ticker id="tTAYww93BAADlAC5"></rssapp-ticker>
+    <script src="https://widget.rss.app/v1/ticker.js" type="text/javascript" async></script>
+    <br>
+
+    
+<!-- Left Container -->
+    <div class="container-left">
+        <!-- Paste your RSS widget embed code here -->
+        <rssapp-imageboard id="tTAYww93BAADlAC5"></rssapp-imageboard>
+        <script src="https://widget.rss.app/v1/imageboard.js" type="text/javascript" async></script>
+    </div>
+
+<div class="container-fluid pt-5 mb-3">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="m-0 text-uppercase font-weight-bold">Featured News</h4>
+            </div>
+            <rssapp-magazine id="tRvU0oej56JQJlbM"></rssapp-magazine>
+            <script src="https://widget.rss.app/v1/magazine.js" type="text/javascript" async></script>
+        </div>
+</div>
+
+    <!-- News With Sidebar Start -->
+<div class="container-fluid pt-5 mb-3">
+        <div class="container">
+            <div class="section-title">
+                <h4 class="m-0 text-uppercase font-weight-bold">LATEST NEWS</h4>
+            </div>
+  </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+<!-- ElfSight App -->
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-13dc3010-7272-498a-b095-0b6a61bd888e" data-elfsight-app-lazy></div>
+	
+
+</body>
+		
+<footer class="bg-dark text-white">
+  <div class="container py-4">
+    <div class="row">
+      <!-- About Us Column -->
+      <div class="col-md-3">
+<h5><a href="../About-Us/about.html" style="color: white; text-decoration: none;">About Us</a></h5>
+
+      </div>
+<br>
+<br>
+<br>
+
+      <!-- Our Team Column -->
+      <div class="col-md-3">
+      </h5>
+       <a href="../About-Us/Team/Team_index.html" style="color: white; text-decoration: none;">Our Team</a>    </h5>
+      </div>
+
+ <!-- Social Media Column -->
+      <div class="col-md-3">
+        <h5>Social Media</h5>
+        <ul class="list-unstyled">
+          <li><!--
+            <a href="#" class="text-white">
+            <i class="fa fa-facebook"></i> Facebook&nbsp; </a>
+          </li> -->
+          <li>
+            <a href="https://www.instagram.com/bharat_genome_database/" class="text-white">
+              <i class="fa fa-instagram"></i> Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/BGDB_ORG" class="text-white">
+              <i class="fa fa-twitter"></i> Twitter (X)
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Us Column -->
+      <div class="col-md-3">
+    <h5><a href="https://bharatgenomedatabase.org/bgdb/node/1" style="color: white; text-decoration: none;">Contact Us</a></h5>
+        <address>
+        Email: research@bgdb.org
+<br><a href="https://bharatgenomedatabase.org/bgdb/node/1">
+			   Click Here to submit a query&nbsp;</a>
+        </address>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p>&copy; <span id="currentYear"></span> Bharat Genome Database.org</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
+</html>

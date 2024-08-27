@@ -1,0 +1,611 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Add Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="BGDB-index-files/magicscroll/magicscroll.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="BGDB-index-files/magicscroll/magicscroll.js"></script>
+<!-- Add Bootstrap JS (Popper.js and Bootstrap JS) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+<meta charset="utf-8">
+
+		
+	
+
+	<style>
+		.navbar-nav .nav-link:hover {
+  background-color: #28a745; /* Green colors for the overlay */
+  color: #fff; /* Text color on hover */
+}
+</style>
+
+	<style>
+  /* Custom styling for the banner */
+  .custom-banner {
+    background-color: #f5a623; /* Custom background color */
+    color: #fff; /* Custom text color */
+    padding: 10px; /* Adjust padding as needed */
+  }
+
+  .custom-banner h2 {
+    font-size: 36px; /* Custom font size for the heading */
+  }
+</style>
+	
+	
+<!-- Magic Scroll -->
+<script>
+var MagicScrollOptions = {
+  autoplay: 1000,
+  mode: "cover-flow",
+  loop: "off",
+  draggable: true,
+  lazyLoad: true,
+  start: 0, // Start with the first item (index 0)
+};
+
+var magicScrollContainer = document.querySelector(".magic-scroll-container");
+
+var magicScroll = new MagicScroll('.magic-scroll-container', MagicScrollOptions);
+
+function restartCarousel() {
+  setTimeout(function() {
+    magicScroll.show(0); // Go back to the first item
+    magicScroll.play(); // Restart autoplay
+  }, 3000); // Set the delay to 3 seconds (3000 milliseconds)
+}
+
+magicScroll.on('itemChange', function(event) {
+  if (event.index === magicScroll.getTotalItems() - 1) {
+    magicScroll.pause(); // Pause autoplay when reaching the last item
+    restartCarousel(); // Call the function to restart the carousel
+  }
+});
+
+magicScroll.play();
+</script>
+
+	
+	
+	<style>
+  /* Styling for the boxes */
+  .box {
+    border: 2px solid #28a745; /* Border color */
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  /* Styling for the photo gallery images */
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .image-container {
+    margin: 10px;
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width of each image container (33.33% for 3 columns) */
+    position: relative; /* Position relative for caption positioning */
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd; /* Image border */
+    transition: transform 0.2s; /* Add a smooth hover effect */
+  }
+
+  .image-container img:hover {
+    transform: scale(1.1); /* Enlarge the image on hover */
+  }
+
+  /* Styling for captions */
+  .caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Background color for caption */
+    color: #fff; /* Text color for caption */
+    padding: 5px 10px;
+    font-size: 14px;
+    opacity: 0; /* Hide the caption by default */
+    transition: opacity 0.2s;
+  }
+
+  .image-container:hover .caption {
+    opacity: 1; /* Show the caption on hover */
+  }
+</style>
+
+
+	
+<title>Bharat Genome Database</title>
+	<link rel="icon" type="image/icon-icon" href="BGDB-index-files/Logo/bgdb-favicon.png">
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//bharatgenomedatabase.org/new-tools/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '1']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+</head>
+
+	<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <strong><a href="index.html" class="navbar-brand"> <img src="BGDB-index-files/Logo/bgdb-simple-white-bg-1.ico" alt="Logo" width="75" height="74" class="img-fluid rounded"> </a> <span style="font-size: 24px; font-weight: bold; font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';"><a class="navbar-brand" href="#"> </a>Bharat Genome Database</strong><a class="navbar-brand" href="#"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="Research-portal/index.html" style="color: black;">Research Portal</a>
+      </li>
+
+      </li>
+		<li class="nav-item" style="margin-left: 15px;">
+ 		 <a class="nav-link" href="News/index.html" style="color: black;">News</a>
+		</li>
+    <li class="nav-item" style="margin-left: 20px;">
+      <a class="nav-link" href="Milestones/index.html" style="color: black;">Milestones </a>
+      </li>
+      <li class="nav-item" style="margin-left: 20px;">
+        <a class="nav-link" href="About-Us/PAG-DEV/BGDB@PAG31/index.html" style="color: black;">PAG 31 </a>
+        </li>
+		<li class="nav-item" style="margin-left: 20px;">
+  			<a class="nav-link" href="About-Us/about.html" style="color: black;">About Us</a>
+				</li>
+        <li class="nav-item" style="margin-left: 20px;">
+          <a class="nav-link" href="team-new/index-team.html" style="color: black;">Meet the Team</a>
+          </li>
+				<li class="nav-item" style="margin-left: 15px;">
+  <a class="nav-link" href="contact-us/index.html" style="color: black;">Contact Us</a>
+</li>
+				<li class="nav-item" style="margin-left: 15px;">
+				  <a class="btn btn-primary" href="https://www.bharatgenomedatabase.org/bgdb/user" style="color: black;">Login</a>
+				</li>
+					</ul>
+						</div>
+
+</nav>
+<section><!--Welcome marquee>
+    <!-- Specific styles for the scrollingText section -->
+    <style>
+        #scrollingText {
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+  #lotus {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+
+        #timeDate 
+		{
+            margin-left: auto;
+            font-size: 1em;
+            display: flex;
+            justify-content: space-between;
+            width: 160px; /* Set a fixed width for better alignment */
+        }
+
+        #scrollingText marquee {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <div id="scrollingText">
+    <div id="lotus"></div>
+    <div id="timeDate"></div> <!-- Container for time and date -->
+    <marquee behavior="scroll" direction="left">
+       🌺 Welcome to Bharat Genome Database 🌺 Update : JBrowse 2 Launched for Bharat Genome Database
+    </marquee>
+    <div id="lotus"></div>
+</div>
+<script>
+    function updateTimeDate() {
+        var now = new Date();
+        var timeDateContainer = document.getElementById("timeDate");
+        var formattedTimeDate = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+        timeDateContainer.textContent = formattedTimeDate;
+    }
+
+    // Update time and date every second
+    setInterval(updateTimeDate, 1000);
+
+    // Initial update
+    updateTimeDate();
+</script>	
+    </section>
+
+
+	
+	
+<!-- Add this code below your navigation bar -->
+<div id="imageCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators (optional) -->
+  <ol class="carousel-indicators">
+    <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#imageCarousel" data-slide-to="1"></li>
+    <li data-target="#imageCarousel" data-slide-to="2"></li>
+    <li data-target="#imageCarousel" data-slide-to="3"></li>
+    <li data-target="#imageCarousel" data-slide-to="5"></li>
+  </ol>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="index.html">
+        <img src="BGDB-index-files/Main-Carousel-top/1920x5002.png" alt="Image 1" class="d-block w-100">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="#">
+        <img src="BGDB-index-files/Main-Carousel-top/foundation.png" alt="Image 2" class="d-block w-100">
+      </a>
+    </div>
+	  <div class="carousel-item">
+      <a href="About-Us/PAG-DEV/BGDB@PAG31/index.html">
+        <img src="BGDB-index-files/Main-Carousel-top/PAG-2024.png" alt="Image 4" class="d-block w-100">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="tool/JBrowse2/index.html">
+        <img src="BGDB-index-files/Main-Carousel-top/JB2.png" alt="Image 3" class="d-block w-100">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="#">
+        <img src="BGDB-index-files/Main-Carousel-top/Copy of We are Presenting at PAG 2024.png" alt="Image 4" class="d-block w-100">
+      </a>
+    </div>
+  <!--  <div class="carousel-item">
+      <a href="#">
+        <img src="BGDB-index-files/Main-Carousel-top/pexels-monique-laats-733090.jpg" alt="Image 5" class="d-block w-100">
+      </a>
+    </div>-->
+  </div>
+
+  <!-- Controls (Next/Previous) -->
+  <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- Add this code below your carousel -->
+<div class="container-fluid mt-1">
+  <div class="row">
+<div class="col-md-12 text-center" style="background-color: #2618D4;">
+      <div>
+        <h2 class="font-weight-bold" style="color: white;">New Genomes</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="MagicScroll mt-1">
+    <a href="resources/Lotus/Lotus.html"><img src="BGDB-index-files/Genomic-Resources/lotus.png"></a>
+    <a href="resources/Coconut/Coconut.html"><img src="BGDB-index-files/Genomic-Resources/coconut.png"></a>
+    <a href="resources/Baniyan-tree/baniyan-tree.html"><img src="BGDB-index-files/Genomic-Resources/baniyan.png"></a>
+	<a href="resources/Neem/Neem.html"><img src="BGDB-index-files/Genomic-Resources/neem.jpg">
+    <a href="resources/Ginger/Ginger.html"><img src="BGDB-index-files/Genomic-Resources/ginger.jpg"></a>
+	<a href="resources/Tulsi/tulsi.html"><img src="BGDB-index-files/Genomic-Resources/tulasi.jpg"></a>
+    <a href="resources/jackfruit/jackfruit.html"><img src="BGDB-index-files/Genomic-Resources/jackfruit.jpg"></a>
+    <a href="resources/Turmeric/Turmeric.html"><img src="BGDB-index-files/Genomic-Resources/turmeric.jpg"></a>
+   <a href="resources/Rice/rice.html"><img src="BGDB-index-files/Genomic-Resources/rice.jpg"></a>
+   <a href="resources/Mango/mango.html"><img src="BGDB-index-files/Genomic-Resources/mango.jpg"></a>
+   <a href="resources/cajanus_cajan/Cajanus cajan.html"><img src="resources/cajanus_cajan/Cajanus cajan_.jpg"></a>
+   <a href="resources/sandalwood/santalum_album.html"><img src="resources/sandalwood/dextrosandel.jpg"></a>
+   <a href="resources/Finger millet/millet.html"><img src="resources/Finger millet/csm_finger-millet_01b29756e6.webp"></a>
+   <a href="resources/Momordica charantia/momordica.html"><img src="resources/Momordica charantia/bitter-gourd-6534410_1280.jpg"></a>
+   <a href="resources/Papaya/papaya.html"><img src="resources/Papaya/papaya-istock.jpg"></a>
+   <a href="resources/Vigna mungo/Vigna.html"><img src="resources/Vigna mungo/mung_bean_pods.jpg"></a>
+
+
+  </div>
+<div class="MagicScroll" data-options="mode: carousel; draggable: true;">
+</div> 
+<!-- Add this code below the film strip carousel -->
+<!-- Add this code below the film strip carousel -->
+
+<div class="container-fluid mt-4">
+  <div class="row">
+    <!-- Resources Box -->
+    <div class="col-md-6">
+      <div class="box">
+        <h3 class="text-center" style="background-color: blue; color: white;"><strong>Genomic Resources</strong></h3>
+        <div class="photo-gallery">
+          <!-- Add your square images with links and captions here -->
+          <div class="image-container">
+            <a href="resources/Lotus/Lotus.html">
+              <img src="BGDB-index-files/Genomic-Resources/lotus.png" alt="Resource 1" class="img-fluid rounded">
+            <div class="caption">
+<p>Lotus&nbsp;</p>
+            </div>
+            </a>
+          </div>
+			<div class="image-container">
+            <a href="resources/Coconut/Coconut.html">
+              <img src="BGDB-index-files/Genomic-Resources/coconut.png" alt="Resource 1" class="img-fluid rounded">
+            <div class="caption">Coconut</div>
+            </a>
+          </div>
+			<div class="image-container">
+            <a href="resources/Baniyan-tree/baniyan-tree.html">
+              <img src="BGDB-index-files/Genomic-Resources/baniyan.png" alt="Resource 1" class="img-fluid rounded">
+            <div class="caption">Baniyan Tree</div>
+            </a>
+          </div>
+			<div class="image-container">
+            <a href="resources/Neem/Neem.html">
+              <img src="BGDB-index-files/Genomic-Resources/neem.jpg" alt="Resource 1" class="img-fluid rounded">
+            <div class="caption">Neem</div>
+            </a>
+          </div>
+			<div class="image-container">
+            <a href="resources/Ginger/Ginger.html">
+              <img src="BGDB-index-files/Genomic-Resources/ginger.jpg" alt="Resource 1" class="img-fluid rounded">
+            <div class="caption">Ginger</div>
+            </a>
+          </div>
+			<div class="image-container">
+			<a href="resources/Tulsi/tulsi.html">
+				<img src="BGDB-index-files/Genomic-Resources/tulasi.jpg" alt="Resource 1" class="img-fluid rounded">
+            <div class="caption">&nbsp;Tulsi</div>
+				</a>
+          </div>
+			<div class="image-container">
+            <a href="resources/jackfruit/jackfruit.html">
+              <img src="BGDB-index-files/Genomic-Resources/jackfruit.jpg" alt="Resource 1" class="img-fluid rounded">
+            <div class="caption">Jackfruit</div>
+            </a>
+          </div>
+			<div class="image-container">
+            <a href="resources/Turmeric/Turmeric.html">
+              <img src="BGDB-index-files/Genomic-Resources/turmeric.jpg" alt="Resource 1" class="img-fluid rounded">
+            <div class="caption">Turmeric</div>
+            </a>
+          </div>
+			<div class="image-container">
+            <a href="More-Genome/index.html">
+              <img src="BGDB-index-files/Genomic-Resources/Join.png" alt="Resource 1" class="img-fluid rounded">
+            <div class="caption">Click Here</div>
+            </a>
+          </div>
+          <!--<div class="image-container">
+            <a href="resource2.html">
+              <img src="resource2.jpg" alt="Resource 2" class="img-fluid">
+            </a>
+            <div class="caption">Caption for Resource 2</div>
+          </div>
+          <!-- Add more images and captions as needed -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools Box -->
+    <div class="col-md-6">
+      <div class="box">
+        <h3 class="text-center" style="background-color: blue; color: white;"><strong>Genomic Tools</strong></h3>
+        <div class="photo-gallery">
+          <!-- Add your square images with links and captions here -->
+          <div class="image-container">
+            <a href="bgdb/blast/nucleotide/nucleotide">
+              <img src="BGDB-index-files/Tools/Green leafs logo in a circle.png" alt="Tool 1" class="img-fluid" width="225" height="225">
+            <div class="caption">BLAST</div>
+            </a>
+          </div>
+			<div class="image-container">
+            <a href="tool/JBrowse/index.html">
+              <img src="BGDB-index-files/Tools/Dark Green and Sea Green Modern Gradient Pharmacy Health Logo.png" alt="Tool 1" class="img-fluid" width="225" height="225">
+            <div class="caption">JBrowse</div>
+            </a>
+          </div>
+		<div class="image-container">
+  <a href="tool/one-click-site-deployer-tool/form-sitedeployer-index.html">
+    <img src="BGDB-index-files/Tools/1.png" alt="Tool 1" class="img-fluid" width="225" height="225">
+			<div class="caption">BGDB Site Deployer</div>
+  </a>
+          </div>
+			
+			
+			<!--Alignment tool -->
+			<!--Alignment tool 
+	<div class="image-container" style="align-content: flex-start">
+  <a href="tool/alignment-sandbox/public/index.html">
+    <img src="BGDB-index-files/Tools/Blue Modern Artificial Intelligence Technology Logo (1).png" alt="Tool 1" class="img-fluid" width="225" height="225">
+  </a>
+
+  <div class="caption"></div>
+  <div class="caption">BGDB Alignment tool</div>
+			</div>-->
+			<!--JBrowse2-->
+			<div class="image-container" style="align-content: flex-start">
+  <a href="tool/JBrowse2/index.html">
+    <img src="BGDB-index-files/Tools/2.png" alt="Tool 1" class="img-fluid" width="225" height="225">
+  <div class="caption"></div>
+  <div class="caption">Jbrowse 2</div>
+  </a>
+			</div>
+			<!--IGV -->
+			
+			<div class="image-container" style="align-content: flex-start">
+  <a href="https://bharatgenomedatabase.org/new-tools/igv/">
+    <img src="BGDB-index-files/Tools/igv-icon.png" alt="Tool 1" class="img-fluid" width="225" height="225">
+  </a>
+
+  <div class="caption"></div>
+  <div class="caption">IGV</div>
+			</div>
+          </div>
+	  </div>
+		<!--Data Submission -->
+			
+			<!--Data Submission --
+			<div class="image-container">
+            <a href="http://bharatgenometrial.online/bgdbsite1/node/2">
+              <img src="BGDB-index-files/Tools/data submitter.png" alt="Tool 1" class="img-fluid">
+            </a>
+            <div class="caption">Data Loader</div>
+          </div>-->
+			<!--tools --
+			<div class="image-container">
+            <a href="tool1.html">
+              <img src="BGDB-index-files/Tools/Jbrowse.png" alt="Tool 1" class="img-fluid">
+            </a>
+            <div class="caption">Apple</div>
+          </div>
+          <div class="image-container">
+            <a href="tool2.html">
+              <img src="BGDB-index-files/Tools/Jbrowse.png" alt="Tool 2" class="img-fluid">
+            </a>
+            <div class="caption">Caption for Tool 2</div>
+          </div>
+          <!-- Add more images and captions as needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add this code at the end of your HTML document, just before the closing </body>
+		
+		
+		<!--CAROUSEL JUMBOTRON-->
+<section>
+	<!--CAROUSEL JUMBOTRON BACKGROUND-->
+<style>
+  .jumbotron {
+	 background: linear-gradient(135deg, #de3b69, #ffff);  }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .carousel-item {
+            background: linear-gradient(135deg, #de3b69, #ffff); /* Adjust the gradient colors as needed */
+        }
+    </style>
+</head>
+<body>
+<!--
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>-->
+
+ <!-- <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="jumbotron">
+        <h1 class="display-4" style="color: #200060;"><strong>Internship Meet on June 2024&nbsp;&nbsp;</strong></h1>
+        <p class="lead"><strong>Topic:</strong> BGDB.org: Introducing Internship program 🌐🧬&nbsp;</p>
+        <br>
+
+  <a class="btn btn-primary btn-lg" href="https://forms.gle/HDQwzts4WpeMZT9t5" role="button" style="position: relative; left: 100px; bottom: 20px;">Register Here for Internship </a>
+</div>-->
+	
+		
+      </div>
+    </div>
+	  
+
+<footer class="bg-dark text-white">
+  <div class="container py-4">
+    <div class="row">
+      <!-- About Us Column -->
+      <div class="col-md-3">
+		  <h5><a href="About-Us/about.html">About Us</a></h5>
+        <p align="justify">An Indian Genomic Database provide access to a wealth of genetic information specific to the diverse population of India.</p>
+      </div>
+
+      <!-- Our Team Column -->
+      <div class="col-md-3">
+        <h5>Our Team</h5>
+        <a href="About-Us/Team/Team_index.html">Learn More</a>
+      </div>
+
+      <!-- Social Media Column -->
+      <div class="col-md-3">
+        <h5>Social Media</h5>
+        <ul class="list-unstyled">
+          <li><!--
+            <a href="#" class="text-white">
+            <i class="fa fa-facebook"></i> Facebook&nbsp; </a>
+          </li> -->
+          <li>
+            <a href="https://www.instagram.com/bharat_genome_database/" class="text-white">
+              <i class="fa fa-instagram"></i> Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/BGDB_ORG" class="text-white">
+              <i class="fa fa-twitter"></i> Twitter (X)
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Us Column -->
+      <div class="col-md-3">
+        <h5>Contact Us</h5>
+        <address>
+        Email: research@bgdb.org
+
+		<br><a href="contact-us/index.html">
+			   Click Here to submit a query&nbsp;</a>
+        </address>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <img src="/BGDB-index-files/Logo/bgdb-favicon.png" alt="Footer Image" style="max-width: 100px;">
+        <p>&copy; <span id="currentYear"></span> Bharat Genome Database.org</p>
+      </div>
+    </div>
+    </div>
+    </footer>
+    <script>
+      document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+    
+
+</body>
+</html>

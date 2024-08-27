@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+<title>BHARAT GENOME DATABASE.ORG</title>
+</head>
+<body>
+<header>
+    <div class="logo">
+    <a href="../../index.html" target="_parent"><img src="../../BGDB-index-files/Logo/bgdb simple white bg.png" alt="Logo"></a> </div>
+    <h1 align="center">BHARAT GENOME DATABASE</h1>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+		  <li><a href="../../Research-portal/index.html">Research Portal</li>
+        <li><a href="../../About-Us/about.html">About Us</a></li>
+        <li><a href="https://github.com/Sastha-Kumar-N/Amino-Acid-Game">Code</a></li>
+        <li><a href="../../contact-us/index.html">Contact</a></li>
+      </ul>
+  </nav>
+</header>
+	
+	
+	
+	<div class="main-content">
+<div class="game-header">
+      <h2>Amino Acid Matching Game</h2>
+    </div>
+	
+	
+	
+	
+	
+	
+	<style>
+		
+		
+		
+		
+        body {
+            display: ;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .game-container {
+            text-align: center;
+        }
+        .card {
+            display: inline-table;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: #fff;
+            border: 2px solid #333;
+            cursor: pointer;
+            user-select: none;
+            font-size: 20px;
+            line-height: 100px;
+        }
+		.rules-container {
+    margin-top: 10px;
+    text-align: center;
+    border: 2px solid green; /* Green outline */
+    background-color: transparent; /* Transparent background */
+    padding: 10px; /* Add padding for spacing */
+}
+
+.rules-container ul {
+    list-style-type: disc; /* Use bullet points for the list */
+    padding-left: 20px; /* Adjust the padding for better alignment */
+}
+	 /* Add the CSS styles here */
+        .modal-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }	
+        .rules-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rules-container h2 {
+    color: #333;
+    text-align: center;
+}
+
+.rules-container p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.rules-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.rules-container li {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666;
+}
+
+.rules-container li::before {
+    content: "\2022"; /* Use a solid circle bullet point */
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Style the links if there are any */
+.rules-container a {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+/* Hover effect for links */
+.rules-container a:hover {
+    color: #0056b3;
+}
+
+    </style>
+<script>
+        // Add the JavaScript code here
+        function openModal() {
+            document.getElementById('modal-container').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modal-container').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+	<br>
+    <div class="game-container" id="game-container"></div>
+
+<div class="rules-container">
+    <h2>Amino acid Matching Game Rules</h2>
+    <p>Welcome to the Genomic Matching Game! The rules are simple:</p>
+    <ul>
+        <li>Click on a card to reveal the Amino acid sequence it represents.</li>
+        <li>Click on a second card to reveal its sequence.</li>
+        <li>If the sequences on the two flipped cards match, the cards stay face-up.</li>
+        <li>If the sequences do not match, both cards are flipped face-down again.</li>
+        <li>Match all pairs to win the game!</li>
+    </ul>
+</div>
+
+
+<script src="genomicGame.js"></script>
+<!-- Add this div at the end of your body -->
+<div id="modal-container" class="modal-container">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <p id="modal-content-text"></p>
+    </div>
+</div>
+<footer class="text-center" style="color: #1166FC;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p>Copyright © Bharat Genome Database 2024. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

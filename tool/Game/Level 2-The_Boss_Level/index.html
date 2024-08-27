@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BioGame: Guess the Amino Acid</title>
+</head>
+<body style="padding-top: 70px">
+    <div id="game-container">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#"><img src="../../../BGDB-index-files/Logo/bgdb simple white bg.png" width="50" height="43" alt=""/>Bharat Genome Database&nbsp;</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active"> <a class="nav-link" href="../../../index.html">Home <span class="sr-only">(current)</span></a> </li>
+              <li class="nav-item active"> <a class="nav-link" href="../../../Research-portal/index.html">Research portal</a> </li>
+              <li class="nav-item dropdown active"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Tools&nbsp; </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">BLAST</a> <a class="dropdown-item" href="../../JBrowse/index.html">JBrowse action</a><a class="dropdown-item" href="../../site-deployer-tool.html">One-Click Site Deployer</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="../1.html">Level 1 Amino- Flip-Fun!</a> </div>
+              </li>
+              <li class="nav-item  active"> <a class="nav-link enabled" href="#">BGDB News</a> </li>
+            </ul>
+</div>
+      </nav>
+<h1><strong>BioGame: Guess the Amino Acid</strong></h1>
+        <div id="amino-acid-image"></div>
+        <input type="text" id="guess-input" placeholder="Enter your guess">
+        <button id="check-guess-btn">Check Guess</button>
+<p id="result">&nbsp;</p>
+    </div>
+    <script src="script.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+</body>
+</html>

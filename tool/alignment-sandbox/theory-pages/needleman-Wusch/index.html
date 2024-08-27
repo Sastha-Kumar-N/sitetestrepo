@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Needleman-Wunsch Algorithm</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+            <img src="../../../../BGDB-index-files/Logo/bgdb simple white bg.png" alt="Logo" class="logo-image"> &nbsp;
+          </div>
+          <div class="name"><a href="#">Bharat Genome Database</a></div>
+
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Portal</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <a href="#" class="action-btn">Login</a>
+        <div class="toggle-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="dropdown-menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Portal</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    
+    <section class="notes">
+      <div class="notes-container">
+        <h1>Needleman-Wunsch Algorithm</h1>
+        <h2>Introduction</h2>
+        <p>The Needleman-Wunsch algorithm is a dynamic programming method used for sequence alignment, specifically for finding the optimal alignment of two sequences. It was originally developed for protein and nucleotide sequences to identify similarities and differences, which is crucial in bioinformatics for tasks such as identifying homologous sequences.</p>
+        <h2>Defnition</h2>
+        <p>The Needleman-Wunsch algorithm aligns two sequences by maximizing the alignment score based on a scoring system for matches, mismatches, and gaps. The algorithm constructs a matrix to represent the scores and determines the best alignment through backtracking.</p>
+        <h2>Algorithm Parameters</h2>
+        <ul>
+            <li><strong>Sequences</strong>: Two sequences <em>A</em> and <em>B</em> to be aligned.</li>
+            <li><strong>Scoring System</strong>:
+                <ul>
+                    <li>Match score (<em>S<sub>match</sub></em>)</li>
+                    <li>Mismatch penalty (<em>S<sub>mismatch</sub></em>)</li>
+                    <li>Gap penalty (<em>S<sub>gap</sub></em>)</li>
+                </ul>
+            </li>
+        </ul> 
+        <h2>Steps of the Algorithm</h2>
+
+        <h3>Initialization</h3>
+        <p>Create a matrix <em>F</em> of size <em>(n+1) &times; (m+1)</em> where <em>n</em> and <em>m</em> are the lengths of sequences <em>A</em> and <em>B</em> respectively. Initialize the first row and column of the matrix with gap penalties.</p>
+    
+        <h3>Matrix Filling</h3>
+        <p>Use the following recurrence relation to fill the matrix <em>F</em>:</p>
+        <pre>
+    F(i, j) = max {
+        F(i-1, j-1) + S(A<sub>i</sub>, B<sub>j</sub>)   (match/mismatch)
+        F(i-1, j) + S<sub>gap</sub>                     (gap in B)
+        F(i, j-1) + S<sub>gap</sub>                     (gap in A)
+    }
+        </pre>
+        <p>Here, <em>S(A<sub>i</sub>, B<sub>j</sub>)</em> is the score for aligning characters <em>A<sub>i</sub></em> and <em>B<sub>j</sub></em>.</p>
+    
+        <h3>Traceback</h3>
+        <p>Start from <em>F(n, m)</em> and move to <em>F(0, 0)</em> to determine the optimal alignment. Follow the path that led to the current cell's score (match/mismatch, gap in <em>A</em>, or gap in <em>B</em>).</p>
+    
+        <h2>Example</h2>
+        <p>Consider two sequences <em>A = GATTACA</em> and <em>B = GCATGCU</em> with the following scoring system:</p>
+        <ul>
+            <li>Match score: +1</li>
+            <li>Mismatch penalty: -1</li>
+            <li>Gap penalty: -1</li>
+        </ul>
+    
+        <h3>Matrix Initialization:</h3>
+        <table>
+            <tr>
+                <td></td><td></td><td>G</td><td>C</td><td>A</td><td>T</td><td>G</td><td>C</td><td>U</td>
+            </tr>
+            <tr>
+                <td></td><td>0</td><td>-1</td><td>-2</td><td>-3</td><td>-4</td><td>-5</td><td>-6</td><td>-7</td>
+            </tr>
+            <tr>
+                <td>G</td><td>-1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td>A</td><td>-2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td>T</td><td>-3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td>T</td><td>-4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td>A</td><td>-5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td>C</td><td>-6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+            <tr>
+                <td>A</td><td>-7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        </table>
+    
+        <h3>Matrix Filling:</h3>
+        <table>
+            <tr>
+                <td></td><td></td><td>G</td><td>C</td><td>A</td><td>T</td><td>G</td><td>C</td><td>U</td>
+            </tr>
+            <tr>
+                <td></td><td>0</td><td>-1</td><td>-2</td><td>-3</td><td>-4</td><td>-5</td><td>-6</td><td>-7</td>
+            </tr>
+            <tr>
+                <td>G</td><td>-1</td><td>1</td><td>0</td><td>-1</td><td>-2</td><td>-3</td><td>-4</td><td>-5</td>
+            </tr>
+            <tr>
+                <td>A</td><td>-2</td><td>0</td><td>0</td><td>1</td><td>0</td><td>-1</td><td>-2</td><td>-3</td>
+            </tr>
+            <tr>
+                <td>T</td><td>-3</td><td>-1</td><td>-1</td><td>0</td><td>2</td><td>1</td><td>0</td><td>-1</td>
+            </tr>
+            <tr>
+                <td>T</td><td>-4</td><td>-2</td><td>-2</td><td>-1</td><td>1</td><td>3</td><td>2</td><td>1</td>
+            </tr>
+            <tr>
+                <td>A</td><td>-5</td><td>-3</td><td>-1</td><td>0</td><td>0</td><td>2</td><td>3</td><td>2</td>
+            </tr>
+            <tr>
+                <td>C</td><td>-6</td><td>-4</td><td>-3</td><td>-1</td><td>-1</td><td>1</td><td>3</td><td>2</td>
+            </tr>
+            <tr>
+                <td>A</td><td>-7</td><td>-5</td><td>-4</td><td>-2</td><td>0</td><td>0</td><td>2</td><td>3</td>
+            </tr>
+        </table>
+    
+        <h3>Traceback:</h3>
+        <p>Start from <em>F(7, 8)</em> and trace back to determine the alignment:</p>
+        <pre>
+    A - G A T T A C A
+      G C A T G C - U
+        </pre>
+        <p>Final alignment:</p>
+        <pre>
+    G A T T A C A
+    | | | | | | |
+    G C A T G C U
+        </pre>
+    
+        <h2>Conclusion</h2>
+        <p>The Needleman-Wunsch algorithm is a foundational method in bioinformatics for global sequence alignment. It systematically computes the optimal alignment score and corresponding alignment by considering all possible alignments, making it a robust tool for comparing biological sequences.</p>
+      </div>
+    </section>
+
+    <script>
+      const toggleBtn = document.querySelector('.toggle-btn');
+      const dropDownMenu = document.querySelector('.dropdown-menu');
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open');
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .carousel-item {
+            background: linear-gradient(135deg, #de3b69, #ffff); /* Adjust the gradient colors as needed */
+        }
+    </style>
+<title>BGDB Site Deployer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="images/PixelGreen.css" type="text/css" />
+<link rel="stylesheet" href=""/>
+  <link href="../BGDB-index-files/Logo/bgdb-favicon.png" rel="icon"/>
+	</head>
+<body>
+<div id="wrap">
+  <div id="header">
+    <div id="header-content">
+<div>
+  <br>
+ <h1 id="logo" style="font-size: 33px; display: inline-block;">BGDB Site Deployer Tool</h1>
+</div>
+      <h2 id="slogan">A One click solution for deploying tripal Website</h2> &nbsp;&nbsp;&nbsp;
+      <ul>
+        <li><a href="../../index.html" id="current">Home</a></li>
+        <li><a href="../News/index.html">News</a></li>
+       
+        <li><a href="https://bharatgenomedatabase.org/bgdb/node/1">Support</a></li>
+        <li><a href="../About-Us/about.html">About</a></li>
+      </ul>
+    </div>
+  </div>
+<div class="/">
+  <img src="images/headerphoto.jpg.png" alt="Header Photo" />
+</div>
+  <div id="content-wrap">
+    <div id="content">
+      <div id="sidebar">
+        <div class="sidebox">
+          <h1>Objective</h1>
+          <p>Our primary objective was to create an installation script capable of setting up a biological database management system using Tripal 3 on Debian Linux version 11 efficiently. We aimed to address the shortcomings encountered during our initial deployment attempts, providing a solution that could be expanded to accommodate newer Tripal versions, other similar tools and diverse Linux distributions in the future. We also focused on making it user-friendly so as to help bridge the gap between biologists and bioinformaticians.</p>
+        </div>
+        <div class="sidebox">
+          <h1 class="clear">Sidebar Menu</h1>
+          <ul class="sidemenu">
+             <li><a href="../index.html" id="current">Home</a></li>
+        <li><a href="../News/index.html">News</a></li>
+       
+        <li><a href="https://bharatgenomedatabase.org/bgdb/node/1">Support</a></li>
+        <li><a href="../About-Us/about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="sidebox">
+          <!--<h1>Sponsors</h1>
+          <ul class="sidemenu">
+            <li><a href="#" class="top">Dreamhost</a></li>
+            <li><a href="#">4templates</a></li>
+            <li><a href="#">TemplateMonster</a></li>
+            <li><a href="#">Fotolia.com</a></li>
+            <li><a href="#">Text Link Ads</a></li>--
+          </ul>-->
+        </div>
+        <div class="sidebox">
+          <h1>Releases</h1>
+          <a href="https://github.com/shreyas-a-s/oneclick-website-deployer/releases/latest/download/deployer.zip"><p class="button">Download</p></a>
+        </div>
+        <div class="sidebox">
+          <h1>Reach out to us </h1>
+          <p>If you are interested in supporting my work and would like to contribute, you are welcome to contact us through the form in the site .</p>
+        </div>
+        <div class="sidebox">
+         <div class="sidebox">
+  <h1>Contact Us</h1>
+			 <p class="button"> <a href="https://bharatgenomedatabase.org/bgdb/node/1" class="button">Contact Us</a></p>
+			<br>
+ <h1>How to Contribute</h1>
+			 <p class="button"> <a href="https://github.com/shreyas-a-s/oneclick-website-deployer" class="button"><img src="../About-Us/Team/images/g.jpg" width="20%"></a></p>
+</div>
+            </p>
+          </form>
+        </div>
+      </div>
+      <div id="main">
+        <div class="post"> <a name="TemplateInfo"></a>
+         <h1>Introduction</h1>
+
+
+
+  <p>This project focuses on the development of an installation script that sets up a Biological Database Management System and an accompanying website for use by biologists and bioinformaticians. The script, written in the Bash scripting language and utilizing the Whiptail program for graphical user input, addresses challenges encountered during the setup of our website, BharatGenomeDatabase.org.</p>
+
+  <p>Our objective was to streamline the deployment of the system, overcoming compatibility issues such as the selection of multiple PHP versions and various Tripal dependencies. The script not only successfully achieves this goal but also includes provisions for user-configurable parameters, such as the choice of components to install.</p>
+
+  <p>Some notable components include Tripal extensions like Tripal Blast and Tripal JBrowse, which are not only installed but also configured with example data. This script serves as a foundational tool that can be expanded in the near future by adding more features, such as the ability to deploy newer bioinformatics tools and support for using other Linux distributions as the base.</p>
+
+  <p>Our project underscores the significance of user-friendliness in implementing bioinformatics tools, aiming to provide biologists, particularly those with limited technical expertise, a seamless entry into this emerging era of biological advancement.</p>
+
+  <p>Good luck, and I hope you find the tool useful!</p>
+          <!--<p class="post-footer align-right"> <a href="#" class="readmore">Read more</a> <a href="#" class="comments">Comments (7)</a> <span class="date">Nov 11, 2006</span> </p>-->
+        </div>
+        <a name="SampleTags"></a>
+        <h1>How to install</h1>
+        <p><code>sudo apt update && sudo apt install git -y<br>
+git clone https://github.com/shreyas-a-s/oneclick-website-deployer<br>
+cd oneclick-website-deployer/<br>
+./install.sh <br></code></p>
+      <!--  <h3>single line command from a terminal</h3>
+        <ol>
+          <li><span><code>sudo apt update && sudo apt install git -y && git clone https://github.com/shreyas-a-s/website-tripal.git && cd website-tripal/ && ./install.sh</code></span></li>-->
+        <!--  <li><span>uses span to color the numbers</span></li>
+        </ol>
+        <ul>
+          <li><span>example of unordered list</span></li>
+          <li><span>uses span to color the bullets</span></li>
+        </ul>--
+        <h3>Blockquote</h3>
+        <blockquote>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat....</p>
+        </blockquote>-->
+        <h1>Screenshots</h3>
+<div id="imageCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators (optional) -->
+  <ol class="carousel-indicators">
+    <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#imageCarousel" data-slide-to="1"></li>
+    <li data-target="#imageCarousel" data-slide-to="2"></li>
+    <li data-target="#imageCarousel" data-slide-to="3"></li>
+    <li data-target="#imageCarousel" data-slide-to="4"></li>
+  </ol>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="">
+        <img src="images/deployer/deployer-about-us.png" alt="Image 1" class="d-block w-100">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="">
+        <img src="images/deployer/deployer-whiptail-edit-data.png" alt="Image 2" class="d-block w-100">
+      </a>
+    </div>
+	  <div class="carousel-item">
+      <a href="">
+        <img src="images/deployer/deployer-whiptail-select-components.png" alt="Image 4" class="d-block w-100">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="">
+        <img src="images/deployer/deployer-whiptail-drupal-installed.png" alt="Image 4" class="d-block w-100">
+      </a>
+    </div>
+    <div class="carousel-item">
+      <a href="">
+        <img src="images/deployer/deployer-code.png" alt="Image 5" class="d-block w-100">
+      </a>
+    </div>
+  </div>
+
+  <!-- Controls (Next/Previous) -->
+  <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<section>
+
+	
+	</div>
+  </div>
+</div>
+ 	  
+
+
+      
+  <div id="footer">
+    <div id="footer-content">
+      <div class="col float-left">
+        <h3>Copyright BGDB.org</h3>
+    
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
